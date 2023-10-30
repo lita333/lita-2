@@ -1,0 +1,168 @@
+body, * {
+  padding: 0;
+  margin: 0;
+  font-family: 'Archivo Black', sans-serif;
+}
+
+html, * {
+    padding: 0;
+    margin: 0;
+}
+
+
+canvas {
+    position: absolute;
+    z-index: -10;
+}
+
+p {
+   font-size: 48px;
+    font-weight: 900;
+}
+
+.master-container {
+    width: 100vw;
+    height: 100vh;
+    color: rgb(25, 17, 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.link-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 500px;
+}
+#link {
+
+    padding: 50px;
+}
+
+
+/******** READINGS PAGE *************/
+
+.reading-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(232, 233, 237);
+
+
+    font-size: 100px !important;
+    margin: 0;
+    padding: 0;
+    padding-left: 50px;
+
+}
+
+.list-container {
+    height: 75%;
+    display: flex;
+    align-items: flex-end;
+    display: flex;
+    list-style-type: none;
+}
+
+/******** LINKS *********/
+a {
+    text-decoration: none;
+    color: inherit;
+    padding-bottom: 2px;
+    display: inline-block;
+    position: relative;
+
+}
+
+a::after {
+    content: ''; 
+    position: absolute;
+    width: 0; 
+    height: 2px; 
+    background-color: #000; 
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s; /* Animation for the underline */
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+
+
+li {
+    font-weight: 900;
+    padding: 0;
+    margin-bottom: -24px;
+
+    text-decoration: none !important;
+    list-style-type: none;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none !important;
+    list-style-type: none;
+}
+
+
+
+.blob-1 {
+    width: 80px;
+    height: 80px;
+    aspect-ratio: 1;
+    border: 10px solid rgb(232, 233, 237);
+    padding: 5px;
+    background: 
+      radial-gradient(farthest-side,#000 98%,rgb(232, 233, 237) ) 0 0/20px 20px no-repeat,
+      conic-gradient(from 90deg at 10px 10px,rgb(232, 233, 237)90deg,#000 0) content-box,
+      conic-gradient(from -90deg at 40px 40px,rgb(232, 233, 237) 90deg,#000 0) content-box,
+      #000;
+    filter: blur(4px) contrast(1);
+    animation: b1 2s infinite;
+  }
+
+  .blob-1-container {
+    padding-top: 50px;
+  }
+
+  @keyframes b1 {
+    0%   {background-position:0 0}
+    25%  {background-position:100% 0}
+    50%  {background-position:100% 100%}
+    75%  {background-position:0% 100%}
+    100% {background-position:0% 0}
+  }
+
+  #magicPointer{
+    background-color: #000 !important;
+  }
+  #magicMouseCursor{
+    border: 1px solid #000 !important;
+}
+
+
+
+/***** UNCOMMENT THIS IF BG DOESN'T WORK AHHHH
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+*****/
